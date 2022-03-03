@@ -76,6 +76,7 @@ const Layout = ({
                 collectionRow: CollectionRow
               }}
               mapPageUrl={mapPageUrl}
+              zoom={true}
             />
           </div>
         )}

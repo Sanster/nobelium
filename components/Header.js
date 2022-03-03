@@ -15,7 +15,7 @@ const NavBar = () => {
     <div className="flex-shrink-0">
       <ul className="flex flex-row">
         {links.map(
-          link =>
+          (link) =>
             link.show && (
               <li
                 key={link.id}
@@ -54,7 +54,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
     // return () => {
     //   if (sentinalRef.current) obvserver.unobserve(sentinalRef.current)
     // }
-    /* eslint-disable-line */
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sentinalRef])
   return (
     <>
@@ -71,47 +71,53 @@ const Header = ({ navBarTitle, fullWidth }) => {
             <a aria-label={BLOG.title}>
               <div className="h-6">
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
+                  width="300"
+                  height="300"
+                  viewBox="0 0 300 300"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect
-                    width="24"
-                    height="24"
-                    className="fill-current text-black dark:text-white"
+                  <circle
+                    cx="150"
+                    cy="150"
+                    r="142.5"
+                    fill="black"
+                    stroke="white"
+                    strokeWidth="15"
                   />
-                  <rect width="24" height="24" fill="url(#paint0_radial)" />
-                  <defs>
-                    <radialGradient
-                      id="paint0_radial"
-                      cx="0"
-                      cy="0"
-                      r="1"
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="rotate(45) scale(39.598)"
-                    >
-                      <stop stopColor="#CFCFCF" stopOpacity="0.6" />
-                      <stop offset="1" stopColor="#E9E9E9" stopOpacity="0" />
-                    </radialGradient>
-                  </defs>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M113 187L161.418 85H188L139.582 187H113Z"
+                    fill="white"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M111 214L159.418 112H186L137.582 214H111Z"
+                    fill="black"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M113 216L161.418 114H188L139.582 216H113Z"
+                    fill="white"
+                  />
                 </svg>
               </div>
             </a>
           </Link>
-          {navBarTitle
-            ? (
+
+          {navBarTitle ? (
             <p className="ml-2 font-medium text-day dark:text-night header-name">
               {navBarTitle}
             </p>
-              )
-            : (
+          ) : (
             <p className="ml-2 font-medium text-day dark:text-night header-name">
               {BLOG.title},{' '}
               <span className="font-normal">{BLOG.description}</span>
             </p>
-              )}
+          )}
         </div>
         <NavBar />
       </div>

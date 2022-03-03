@@ -19,7 +19,8 @@ module.exports = {
     }
   },
   rules: {
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'multiline-ternary': 'off'
   },
   globals: {
     React: true
