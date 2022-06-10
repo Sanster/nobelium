@@ -21,11 +21,6 @@ const Collection = dynamic(() =>
     (m) => m.Collection
   )
 )
-const CollectionRow = dynamic(() =>
-  import('react-notion-x/build/third-party/collection').then(
-    (m) => m.CollectionRow
-  )
-)
 
 const mapPageUrl = (id) => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
@@ -89,10 +84,9 @@ const Layout = ({
             <NotionRenderer
               recordMap={blockMap}
               components={{
-                equation: Equation,
-                code: Code,
-                collection: Collection,
-                collectionRow: CollectionRow
+                Equation,
+                Code,
+                Collection
               }}
               mapPageUrl={mapPageUrl}
               zoom={true}
