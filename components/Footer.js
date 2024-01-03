@@ -14,7 +14,7 @@ const Footer = ({ fullWidth }) => {
       <div className="my-4 text-sm leading-6">
         <div className="flex align-baseline justify-between flex-wrap">
           <p>
-            © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`} <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2023032072号-1</a>
+            © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`} <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">沪ICP备2023032072号-1</a>
           </p>
           <Vercel />
         </div>
