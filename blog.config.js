@@ -5,6 +5,7 @@ const BLOG = {
   link: 'https://blog-opal-delta.vercel.app/',
   description: '',
   lang: 'en-US',
+  timezone: 'Asia/Shanghai',
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
